@@ -36,32 +36,6 @@ public class UserScreen {
         setPassword(temp);
     }
 
-    public void book_cab() {
-        Scanner scan = new Scanner(System.in);
-        String source, destination;
-        System.out.println("Enter your source location: ");
-        source = scan.nextLine();
-        System.out.println("Enter your destination location: ");
-        destination = scan.nextLine();
-        int ok = 0, i = 0;
-        for (DriverScreen d : l.dr) {
-            if (d.getBusy() == 0) {
-                ok = 1;
-                System.out.println("Cab Booked!!");
-                System.out.println("Your Driver is: " + d.getName());
-                System.out.println("Driver contact no.: " + d.getContact_no());
-                System.out.println("Vehicle: " + d.getPlate());
-                d.setBusy(1);
-                d.add_rider(getName());
-                break;
-            }
-            i++;
-        }
-        if (ok == 0) {
-            System.out.println("Sorry, no Driver available...");
-        }
-    }
-
     public void setPassword(String password) {
         this.password = password;
     }

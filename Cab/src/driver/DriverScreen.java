@@ -14,7 +14,6 @@ public class DriverScreen {
     String password;
     int busy;
     String namePlate;
-    Vector<String> rider = new Vector<String>();
 
     public DriverScreen() {
         name = "";
@@ -53,80 +52,31 @@ public class DriverScreen {
         setPlate(temp);
     }
 
-    public void rider_history() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("On going rides: ");
-        System.out.println("");
-        for (int i = 0; i < rider.size(); i++) {
-            System.out.print(rider.get(i) + " .");
-            System.out.println("is the ride finished ?");
-            char c;
-            c = scan.next().charAt(0);
-            if (c == 'y') {
-                this.busy = 0;
-                rider.remove(i);
-            }
-        }
-        System.out.println("");
-    }
+    public void setName(String name) {this.name = name;}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setPlate(String namePlate) {this.namePlate = namePlate;}
 
-    public void setPlate(String namePlate) {
-        this.namePlate = namePlate;
-    }
+    public void setContact_no(String contact_no) {this.contact_no = contact_no;}
 
-    public void setContact_no(String contact_no) {
-        this.contact_no = contact_no;
-    }
+    public void setGender(String gender) {this.gender = gender;}
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+    public void setEmail(String email) {this.email = email;}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setPassword(String password) {this.password = password;}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    public void setBusy(int busy) {this.busy = busy;}
 
-    public void setBusy(int busy) {
-        this.busy = busy;
-    }
+    public String getPassword() {return this.password;}
 
-    public String getPassword() {
-        return this.password;
-    }
+    public String getPlate() {return this.namePlate;}
 
-    public String getPlate() {
-        return this.namePlate;
-    }
+    public int getBusy() {return this.busy;}
 
-    public int getBusy() {
-        return this.busy;
-    }
+    public String getEmail() {return this.email;}
 
-    public String getEmail() {
-        return this.email;
-    }
+    public String getGender() {return this.gender;}
 
-    public String getGender() {
-        return this.gender;
-    }
+    public String getName() {return this.name;}
 
-    public String getName() {
-        return this.name;
-    }
-
-    public String getContact_no() {
-        return this.contact_no;
-    }
-
-    public void add_rider(String name) {
-        rider.add(name);
-    }
+    public String getContact_no() {return this.contact_no;}
 }
