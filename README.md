@@ -1,2 +1,2 @@
 # Cab-booking
-SDL Assignment
+A normal cab booking system using Java and MySQL
